@@ -8,3 +8,4 @@
 !*Dockerfile*
 !*.conf
 !Jenkinsfile
+!*.tf
