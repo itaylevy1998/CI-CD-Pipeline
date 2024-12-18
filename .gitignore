@@ -1,0 +1,10 @@
+*
+!.gitignore
+!*/
+!*.yaml
+!*.py
+!*.txt
+!*.html
+!*Dockerfile*
+!*.conf
+!Jenkinsfile

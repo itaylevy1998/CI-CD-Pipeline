@@ -1,0 +1,11 @@
+services:
+  flask:
+    build:
+      context: Gunicorn
+      dockerfile: Dockerfile
+    image: flask
+    ports: 
+      - "5000:5000"
+
+
+

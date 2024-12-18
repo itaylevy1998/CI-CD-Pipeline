@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div>
+        <form action="{{ url_for('forecast') }}" >
+        Please select a city to show forecast:  <br>
+        <input type="text" name="city">
+        <button type="submit">search</button>
+        </form>
+    </div>
+    <h1>Showing forecast for {{ location }} , {{ country }}</h1>
+    <table>
+        <tr>
+            <td>Date</td>
+            <td>Day temperature</td>
+            <td>Night temperature</td>
+            <td>Humidity</td>
+        </tr>
+        {% for day in data %}
+            <tr>
+                <td> {{ day["datetime"] }} </td>
+                <td> {{ day["tempmax"] }} </td>
+                <td> {{ day["tempmin"] }} </td>
+                <td> {{ day["humidity"] }} </td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

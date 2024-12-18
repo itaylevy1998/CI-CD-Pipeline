@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Forecast App</title>
+</head>
+<body>
+    <div>
+        <form action="{{ url_for('forecast') }}" >
+        Please select a city to show forecast after another change!:  <br>
+        <input type="text" name="city" required>
+        <button type="submit">search</button>
+        </form>
+    </div>
+    {% if message %}
+        <h1>{{ message }}</h1>
+    {% endif %}
+</body>
+</html>
